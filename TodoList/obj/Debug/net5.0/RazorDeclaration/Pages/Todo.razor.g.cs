@@ -90,6 +90,24 @@ using TodoList.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 18 "E:\C#\ASP.NET Core Start\Blazor-todo-list-app\TodoList\Pages\Todo.razor"
+       
+    private IList<TodoItem> todos = new List<TodoItem>();
+    private string newTodo;
+
+    private void AddTodo()
+    {
+        if (!String.IsNullOrWhiteSpace(newTodo))
+        {
+            todos.Add(new TodoItem { Title = newTodo });
+            newTodo = String.Empty;
+        }
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591
